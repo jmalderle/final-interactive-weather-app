@@ -135,7 +135,7 @@ a:hover {
   text-align: center;
 }
 
-.weather.forecast.date {
+.weather-forecast-date {
   font-size: 14px;
   color: rgb(135, 135, 135);
 }
