@@ -139,3 +139,12 @@ a:hover {
   font-size: 14px;
   color: rgb(135, 135, 135);
 }
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+  color: rgb(32, 32, 32);
+}
+
+.weather-forecast-temperature-min {
+  color: rgb(135, 135, 135);
+}
