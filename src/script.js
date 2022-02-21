@@ -20,7 +20,7 @@ function formatDate(timestamp) {
   ];
 
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  return `${day} ${hours}:${minutes} CET`;
 }
 
 function displayForecast() {
