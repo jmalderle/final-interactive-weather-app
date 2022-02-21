@@ -1,0 +1,131 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  display: inline;
+  color: #1b1b1b;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 28px;
+  margin-bottom: 0;
+  font-family: "Cormorant Garamond", serif;
+}
+
+h2 {
+  display: inline;
+  color: #1b1b1b;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 28px;
+  margin-bottom: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  color: rgb(135, 135, 135);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 70px auto;
+}
+
+.weather-app {
+  padding: 20px;
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.overview {
+  margin-bottom: 20px;
+}
+
+.form-control,
+.btn {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+}
+
+.btn {
+  border: 1px solid rgb(206, 212, 218);
+}
+
+.btn:hover {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(239, 246, 249) 0%,
+    rgb(206, 239, 253) 90%
+  );
+}
+
+.weather-temperature img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+}
+
+.weather-temperature strong {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+  color: rgb(135, 135, 135);
+}
+
+#fahrenheit-link,
+#celsius-link {
+  text-decoration: none;
+}
+
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
+.credits {
+  color: rgb(135, 135, 135);
+}
+
+a:link {
+  color: rgb(135, 135, 135);
+  text-decoration-color: rgb(135, 135, 135);
+}
+
+a:visited {
+  color: rgb(158, 158, 158);
+  text-decoration-color: rgb(158, 158, 158);
+}
+
+a:hover {
+  color: rgb(235, 46, 241);
+  text-decoration-color: rgb(235, 46, 241);
+}
