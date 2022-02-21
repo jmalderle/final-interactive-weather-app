@@ -129,3 +129,10 @@ a:hover {
   color: rgb(235, 46, 241);
   text-decoration-color: rgb(235, 46, 241);
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: rgb(135, 135, 135);
+  font-size: 14px;
+}
