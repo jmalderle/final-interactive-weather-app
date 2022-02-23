@@ -90,18 +90,6 @@ li:first-letter {
   font-weight: 400;
 }
 
-.weather-temperature .units {
-  position: relative;
-  font-size: 16px;
-  top: -34px;
-  color: rgb(135, 135, 135);
-}
-
-#fahrenheit-link,
-#celsius-link {
-  text-decoration: none;
-}
-
 .weather-temperature .active {
   color: rgb(33, 33, 33);
   cursor: default;
