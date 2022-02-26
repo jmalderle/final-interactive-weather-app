@@ -77,10 +77,11 @@ li:first-letter {
   );
 }
 
-.weather-temperature img {
+#icon {
   margin-right: 5px;
-  height: 64px;
-  width: 64px;
+  margin-bottom: 22px;
+  height: 100px;
+  width: 100px;
 }
 
 .weather-temperature strong {
