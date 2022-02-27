@@ -130,62 +130,135 @@ function displayTemperature(response) {
 
 function getWeatherGif(response) {
   let weatherType = response.data.weather[0].main;
+  let city = response.data.name;
   let weatherTypeElement = document.querySelector("#weatherTypeGif");
-  if (weatherType === "Snow") {
+  if (weatherType === "Snow" && city !== "Hollywood" && city !== "Scranton") {
     weatherTypeElement.innerHTML = `
     <img src="media/chilly.gif" class="weatherTypeGif" alt="snow" />`;
-  } else if (weatherType === "Rain") {
+  } else if (weatherType === "Snow" && city === "Scranton") {
+    weatherTypeElement.innerHTML = `
+    <img src="media/snow-scranton.gif" class="weatherTypeGif" alt="Snow in Scranton" />`;
+  } else if (
+    weatherType === "Rain" &&
+    city !== "Hollywood" &&
+    city !== "Scranton"
+  ) {
     weatherTypeElement.innerHTML = `
     <img src="media/rain.gif" class="weatherTypeGif" alt="rain" />`;
-  } else if (weatherType === "Drizzle") {
+  } else if (weatherType === "Rain" && city === "Scranton") {
+    weatherTypeElement.innerHTML = `
+    <img src="media/rain-scranton.gif" class="weatherTypeGif" alt="Rain in Scranton" />`;
+  } else if (
+    weatherType === "Drizzle" &&
+    city !== "Hollywood" &&
+    city !== "Scranton"
+  ) {
     weatherTypeElement.innerHTML = `
     <img src="media/drizzle.gif" class="weatherTypeGif" alt="drizzle" />`;
-  } else if (weatherType === "Thunderstorm") {
+  } else if (
+    weatherType === "Thunderstorm" &&
+    city !== "Hollywood" &&
+    city !== "Scranton"
+  ) {
     weatherTypeElement.innerHTML = `
     <img src="media/thunderstorm.gif" class="weatherTypeGif" alt="thunderstorm" />`;
-  } else if (weatherType === "Clear") {
+  } else if (
+    weatherType === "Clear" &&
+    city !== "Hollywood" &&
+    city !== "Scranton"
+  ) {
     weatherTypeElement.innerHTML = `
     <img src="media/clearsky.gif" class="weatherTypeGif" alt="clear" />`;
-  } else if (weatherType === "Mist") {
+  } else if (
+    weatherType === "Mist" &&
+    city !== "Hollywood" &&
+    city !== "Scranton"
+  ) {
     weatherTypeElement.innerHTML = `
     <img src="media/mist.gif" class="weatherTypeGif" alt="mist"  />`;
-  } else if (weatherType === "Fog") {
+  } else if (
+    weatherType === "Fog" &&
+    city !== "Hollywood" &&
+    city !== "Scranton"
+  ) {
     weatherTypeElement.innerHTML = `
     <img src="media/fog.gif" class="weatherTypeGif" alt="fog"  />`;
-  } else if (weatherType === "smoke") {
+  } else if (
+    weatherType === "smoke" &&
+    city !== "Hollywood" &&
+    city !== "Scranton"
+  ) {
     weatherTypeElement.innerHTML = `
     <img src="media/smoke.gif" class="weatherTypeGif" alt="smoke"  />`;
-  } else if (weatherType === "Haze") {
+  } else if (
+    weatherType === "Haze" &&
+    city !== "Hollywood" &&
+    city !== "Scranton"
+  ) {
     weatherTypeElement.innerHTML = null;
-  } else if (weatherType === "Dust") {
+  } else if (
+    weatherType === "Dust" &&
+    city !== "Hollywood" &&
+    city !== "Scranton"
+  ) {
     weatherTypeElement.innerHTML = `
     <img src="media/dust.gif" class="weatherTypeGif" alt="dust"  />`;
-  } else if (weatherType === "Sand") {
+  } else if (
+    weatherType === "Sand" &&
+    city !== "Hollywood" &&
+    city !== "Scranton"
+  ) {
     weatherTypeElement.innerHTML = `
     <img src="media/sand.gif" class="weatherTypeGif" alt="sand"  />`;
-  } else if (weatherType === "Ash") {
+  } else if (
+    weatherType === "Ash" &&
+    city !== "Hollywood" &&
+    city !== "Scranton"
+  ) {
     weatherTypeElement.innerHTML = `
     <img src="media/ash.gif" class="weatherTypeGif" alt="ash"  />`;
-  } else if (weatherType === "Squall") {
+  } else if (
+    weatherType === "Squall" &&
+    city !== "Hollywood" &&
+    city !== "Scranton"
+  ) {
     weatherTypeElement.innerHTML = `
     <img src="media/squall.gif" class="weatherTypeGif" alt="squall"  />`;
-  } else if (weatherType === "Tornado") {
+  } else if (
+    weatherType === "Tornado" &&
+    city !== "Hollywood" &&
+    city !== "Scranton"
+  ) {
     weatherTypeElement.innerHTML = `
     <img src="media/tornado.gif" class="weatherTypeGif" alt="tornado"  />`;
-  } else if (weatherType === "Clouds") {
+  } else if (
+    weatherType === "Clouds" &&
+    city !== "Hollywood" &&
+    city !== "Scranton"
+  ) {
     weatherTypeElement.innerHTML = `<img src="media/clouds.gif" class="weatherTypeGif" alt="clouds"  />`;
+  } else if (city === "Hollywood" && city !== "Scranton") {
+    weatherTypeElement.innerHTML = `<img src="media/tinseltown.gif" class="weatherTypeGif" alt="tinseltown"  />`;
+  } else if (city === "Scranton") {
+    weatherTypeElement.innerHTML = `<img src="media/scranton.gif" class="weatherTypeGif" alt="Scranton"  />`;
   }
 }
 
-function showColoredCityNames(response) {
-  let specialCity = response.data.sys.name;
+function showSpecialCity(response) {
+  let specialCity = response.data.name;
   let specialCityElement = document.querySelector("#city");
   if (specialCity === "Paris") {
-    specialCityElement.innerHTML = `
-    RED`;
-  } else if (specialCity === "Paris") {
-    specialCityElement.innerHTML = `
-    RED`;
+    specialCityElement.innerHTML = `Bonjour! Paris`;
+  } else if (specialCity === "Rome") {
+    specialCityElement.innerHTML = `Ciao! Rome`;
+  } else if (specialCity === "London") {
+    specialCityElement.innerHTML = `Hello! London`;
+  } else if (specialCity === "New York") {
+    specialCityElement.innerHTML = `Hello Big Apple! New York`;
+  } else if (specialCity === "Los Angeles") {
+    specialCityElement.innerHTML = `Hello Angels! Los Angeles`;
+  } else if (specialCity === "Hollywood") {
+    specialCityElement.innerHTML = `It’s Tinseltown! Hollywood`;
   }
 }
 
@@ -194,7 +267,7 @@ function search(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
   axios.get(apiUrl).then(getWeatherGif);
-  axios.get(apiUrl).then(showColoredCityNames);
+  axios.get(apiUrl).then(showSpecialCity);
 }
 
 function handleSubmit(event) {
