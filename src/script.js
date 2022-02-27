@@ -112,18 +112,21 @@ function displayTemperature(response) {
 function getWeatherGif(response) {
   let weatherType = response.data.weather[0].main;
   let weatherTypeElement = document.querySelector("#weatherTypeGif");
-  if (weatherType === "Snow" && weatherType !== "Clear Sky") {
+  if (weatherType === "Snow") {
     weatherTypeElement.innerHTML = `
-    <img src="media/chilly.gif" class="weatherTypeGif" alt="chilly" width="200" />`;
-  } else if (weatherType === "Rain" && weatherType !== "Clear Sky") {
+    <img src="media/chilly.gif" class="weatherTypeGif" alt="snow" />`;
+  } else if (weatherType === "Rain") {
     weatherTypeElement.innerHTML = `
-    <img src="media/rain.gif" class="weatherTypeGif" alt="chilly" width="200" />`;
+    <img src="media/rain.gif" class="weatherTypeGif" alt="rain" />`;
   } else if (weatherType === "Thunderstorm") {
     weatherTypeElement.innerHTML = `
-    <img src="media/thunderstorm.gif" class="weatherTypeGif" alt="chilly" width="200" />`;
+    <img src="media/thunderstorm.gif" class="weatherTypeGif" alt="thunderstorm" />`;
   } else if (weatherType === "Clear") {
     weatherTypeElement.innerHTML = `
-    <img src="media/clearsky.gif" class="weatherTypeGif" alt="chilly" width="200" />`;
+    <img src="media/clearsky.gif" class="weatherTypeGif" alt="clear" />`;
+  } else if (weatherType === "Mist") {
+    weatherTypeElement.innerHTML = `
+    <img src="media/mist.gif" class="weatherTypeGif" alt="mist"  />`;
   }
 }
 
