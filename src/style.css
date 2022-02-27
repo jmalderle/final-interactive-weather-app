@@ -84,6 +84,10 @@ li:first-letter {
   width: 100px;
 }
 
+.weatherTypeGif {
+  margin-left: 16px;
+}
+
 .weather-temperature strong {
   color: rgb(33, 33, 33);
   font-size: 64px;

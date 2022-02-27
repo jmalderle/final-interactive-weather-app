@@ -109,10 +109,29 @@ function displayTemperature(response) {
   getForecast(response.data.coord);
 }
 
+function getWeatherGif(response) {
+  let weatherType = response.data.weather[0].main;
+  let weatherTypeElement = document.querySelector("#weatherTypeGif");
+  if (weatherType === "Snow") {
+    weatherTypeElement.innerHTML = `
+    <img src="media/chilly.gif" class="weatherTypeGif" alt="chilly" width="200" />`;
+  } else if (weatherType === "Rain") {
+    weatherTypeElement.innerHTML = `
+    <img src="media/rain.gif" class="weatherTypeGif" alt="chilly" width="200" />`;
+  } else if (weatherType === "Thunderstorm") {
+    weatherTypeElement.innerHTML = `
+    <img src="media/thunderstorm.gif" class="weatherTypeGif" alt="chilly" width="200" />`;
+  } else if (weatherType === "Clear") {
+    weatherTypeElement.innerHTML = `
+    <img src="media/clearsky.gif" class="weatherTypeGif" alt="chilly" width="200" />`;
+  }
+}
+
 function search(city) {
   let apiKey = "ceb455b9c7b642371d7b3ed2d734c15b";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(getWeatherGif);
 }
 
 function handleSubmit(event) {
