@@ -112,10 +112,10 @@ function displayTemperature(response) {
 function getWeatherGif(response) {
   let weatherType = response.data.weather[0].main;
   let weatherTypeElement = document.querySelector("#weatherTypeGif");
-  if (weatherType === "Snow") {
+  if (weatherType === "Snow" && weatherType !== "Clear Sky") {
     weatherTypeElement.innerHTML = `
     <img src="media/chilly.gif" class="weatherTypeGif" alt="chilly" width="200" />`;
-  } else if (weatherType === "Rain") {
+  } else if (weatherType === "Rain" && weatherType !== "Clear Sky") {
     weatherTypeElement.innerHTML = `
     <img src="media/rain.gif" class="weatherTypeGif" alt="chilly" width="200" />`;
   } else if (weatherType === "Thunderstorm") {
