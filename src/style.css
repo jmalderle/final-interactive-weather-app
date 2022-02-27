@@ -87,6 +87,9 @@ li:first-letter {
 .weatherTypeGif {
   max-width: 300px;
   margin: 0 auto;
+  display: block;
+  text-align: center;
+  margin-top: 16px;
 }
 
 .weather-temperature strong {
