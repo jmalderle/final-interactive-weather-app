@@ -123,8 +123,8 @@ a:visited {
 }
 
 a:hover {
-  color: rgb(235, 46, 241);
-  text-decoration-color: rgb(235, 46, 241);
+  color: #000;
+  text-decoration-color: #000;
 }
 
 .weather-forecast {

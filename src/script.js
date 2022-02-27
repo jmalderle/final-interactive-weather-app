@@ -155,6 +155,9 @@ function getWeatherGif(response) {
   ) {
     weatherTypeElement.innerHTML = `
     <img src="media/drizzle.gif" class="weatherTypeGif" alt="drizzle" />`;
+  } else if ((weatherType === "Drizzle") === "Scranton") {
+    weatherTypeElement.innerHTML = `
+    <img src="media/drizzle-scranton.gif" class="weatherTypeGif" alt="Drizzle in Scranton" />`;
   } else if (
     weatherType === "Thunderstorm" &&
     city !== "Hollywood" &&
@@ -169,6 +172,9 @@ function getWeatherGif(response) {
   ) {
     weatherTypeElement.innerHTML = `
     <img src="media/clearsky.gif" class="weatherTypeGif" alt="clear" />`;
+  } else if (weatherType === "Clear" && city === "Scranton") {
+    weatherTypeElement.innerHTML = `
+    <img src="media/clear-scranton.gif" class="weatherTypeGif" alt="Clear Sky in Scranton" />`;
   } else if (
     weatherType === "Mist" &&
     city !== "Hollywood" &&
@@ -183,6 +189,9 @@ function getWeatherGif(response) {
   ) {
     weatherTypeElement.innerHTML = `
     <img src="media/fog.gif" class="weatherTypeGif" alt="fog"  />`;
+  } else if (weatherType === "Fog" && city === "Scranton") {
+    weatherTypeElement.innerHTML = `
+    <img src="media/fog-scranton.gif" class="weatherTypeGif" alt="Fog in Scranton"  />`;
   } else if (
     weatherType === "smoke" &&
     city !== "Hollywood" &&
@@ -190,6 +199,9 @@ function getWeatherGif(response) {
   ) {
     weatherTypeElement.innerHTML = `
     <img src="media/smoke.gif" class="weatherTypeGif" alt="smoke"  />`;
+  } else if (weatherType === "smoke" && city === "Scranton") {
+    weatherTypeElement.innerHTML = `
+    <img src="media/smoke-scranton.gif" class="weatherTypeGif" alt="Smoke in Scranton"  />`;
   } else if (
     weatherType === "Haze" &&
     city !== "Hollywood" &&
@@ -224,6 +236,9 @@ function getWeatherGif(response) {
   ) {
     weatherTypeElement.innerHTML = `
     <img src="media/squall.gif" class="weatherTypeGif" alt="squall"  />`;
+  } else if (weatherType === "Squall" && city === "Scranton") {
+    weatherTypeElement.innerHTML = `
+    <img src="media/squall-scranton.gif" class="weatherTypeGif" alt="Squall in Scranton"  />`;
   } else if (
     weatherType === "Tornado" &&
     city !== "Hollywood" &&
@@ -237,6 +252,8 @@ function getWeatherGif(response) {
     city !== "Scranton"
   ) {
     weatherTypeElement.innerHTML = `<img src="media/clouds.gif" class="weatherTypeGif" alt="clouds"  />`;
+  } else if (weatherType === "Clouds" && city === "Scranton") {
+    weatherTypeElement.innerHTML = `<img src="media/clouds-scranton.gif" class="weatherTypeGif" alt="Clouds over Scranton"  />`;
   } else if (city === "Hollywood" && city !== "Scranton") {
     weatherTypeElement.innerHTML = `<img src="media/tinseltown.gif" class="weatherTypeGif" alt="tinseltown"  />`;
   } else if (city === "Scranton") {
